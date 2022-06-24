@@ -1,0 +1,38 @@
+main {
+  width: 680px;
+  margin: 0 auto;
+}
+
+#outerWrapper {
+  margin-top: 150px;
+}
+
+#userInfoWrapper {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+#userInfoWrapper button {
+  background-color: #0984e3;
+  border-radius: 15px;
+  height: 32px;
+  min-width: 200px;
+  border: none;
+  color: black;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#userInfoWrapper p {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 8px;
+  color: #d63031;
+  font-weight: 400;
+}
+
+#userInfo:hover {
+  cursor: pointer;
+  background-color: #d63031;
+}

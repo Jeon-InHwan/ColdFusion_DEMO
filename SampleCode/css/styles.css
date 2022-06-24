@@ -1,0 +1,19 @@
+body {
+  background: linear-gradient(135deg, #81ecec, #00b894);
+}
+
+main {
+  width: 780px;
+  min-height: 780px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 30px;
+}
+
+main table {
+  margin: 0 auto;
+}
+
+#wrapper {
+  text-align: left;
+}

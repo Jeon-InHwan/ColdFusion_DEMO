@@ -1,0 +1,226 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+menu,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+  font-family: "Source Sans Pro", sans-serif;
+  background: linear-gradient(
+    135deg,
+    rgba(129, 236, 236, 1),
+    rgba(108, 92, 231, 1)
+  );
+}
+
+menu,
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* message */
+
+#errMsg {
+  position: absolute;
+  top: -70px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 440px;
+  min-width: 260px;
+  max-height: 45px;
+  padding: 10px 20px;
+  border-radius: 10000px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1em;
+  color: white;
+  background-color: #d63031;
+  border: none;
+  border-radius: 15px;
+}
+
+#successMsg {
+  position: absolute;
+  top: -70px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 440px;
+  min-width: 260px;
+  max-height: 45px;
+  padding: 10px 20px;
+  border-radius: 10000px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1em;
+  color: white;
+  background-color: #00b894;
+  border: none;
+  border-radius: 15px;
+}
+
+.alert {
+  animation: alert 3.5s ease-in-out forwards;
+}
+
+@keyframes alert {
+  0% {
+    transform: none;
+    opacity: 0;
+  }
+  20% {
+    transform: translateY(110px);
+    opacity: 1;
+  }
+
+  30% {
+    transform: translateY(110px);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateY(110px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-70px);
+    opacity: 0;
+  }
+}
