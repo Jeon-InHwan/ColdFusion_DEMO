@@ -8,7 +8,7 @@
     <cflocation url="login.cfm?errorMsg=#errorMsg#" addtoken="false"></cflocation>
 </cfif>
 
-<cfif #Len(userEmail)# GT 15>
+<cfif #Len(userEmail)# GT 40>
     <cfset errorMsg = "Email is too long!">
     <cflocation url="login.cfm?errorMsg=#errorMsg#" addtoken="false"></cflocation>
 </cfif>
@@ -20,7 +20,7 @@
 </cfif>
 
 
-<cfif #Len(userPwd)# GT 15>
+<cfif #Len(userPwd)# GT 40>
     <cfset errorMsg = "Password is too long!">
     <cflocation url="login.cfm?errorMsg=#errorMsg#" addtoken="false"></cflocation>
 </cfif>
@@ -44,8 +44,10 @@
 
 <!--- Save user data in session scope --->
 <cfset session.loggedInUser = {
-    'userEmail' = dbUser.email
+    'userEmail' = dbUser.email,
+    'nickname' = dbUser.nickname
 } />
+
 <cfset successMsg = "Login Success!">
 <cflocation url="main.cfm?successMsg=#successMsg#" addtoken="false"></cflocation>
 

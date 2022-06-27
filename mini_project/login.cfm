@@ -46,8 +46,8 @@
                     <h1 id="mainTitle">Twitterにログイン</h1>
 
                     <form id="innerWapper" action="loginAuth.cfm" method="POST">
-                        <input type="email" name="userEmail" minlength="5" maxlength="50" placeholder="Email">
-                        <input type="password" name="userPwd" minlength="5" maxlength="50" placeholder="Password"> 
+                        <input type="email" name="userEmail" minlength="5" maxlength="40" placeholder="Email">
+                        <input type="password" name="userPwd" minlength="5" maxlength="40" placeholder="Password"> 
                         <div id="whiteLine">――――――――――――――――――――――――――――――――――――――――――</div>
                         <input id="submitBtn" type="submit" value="Login">
                     </form>

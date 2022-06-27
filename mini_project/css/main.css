@@ -22,17 +22,123 @@ main {
   color: black;
   font-size: 14px;
   font-weight: 400;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #userInfoWrapper p {
   text-align: center;
   margin-top: 5px;
   font-size: 8px;
-  color: #d63031;
-  font-weight: 400;
+  color: #0984e3;
+  font-weight: 600;
+  color: white;
 }
 
 #userInfo:hover {
   cursor: pointer;
   background-color: #d63031;
+}
+
+#twitBtnWrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#twitBtn {
+  position: fixed;
+  bottom: 20px;
+  width: 560px;
+  height: 45px;
+  border: none;
+  border-radius: 20px;
+  background-color: #0984e3;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#twitBtn:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#twitInput {
+  position: fixed;
+  bottom: 85px;
+  width: 560px;
+  height: 45px;
+  border: none;
+  border-radius: 20px;
+  padding: 20px 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#twitsWrapper {
+  position: absolute;
+  left: 0;
+  right: 0%;
+  top: 100px;
+  margin: 0 auto;
+  width: 560px;
+  border: 1px solid rgba(223, 230, 233, 0.7);
+  height: 320px;
+  background-color: rgba(223, 230, 233, 0.1);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#twitsWrapper::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+#twitsWrapper::-webkit-scrollbar-thumb {
+  background-color: #0984e3;
+  border-radius: 15px;
+}
+
+#twitsWrapper::-webkit-scrollbar-track {
+  background-color: #dfe6e9;
+  border-radius: 15px;
+}
+
+.oneTwit {
+  padding: 15px 10px 15px 10px;
+  min-height: 60px;
+}
+
+.oneTwit:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgba(223, 230, 231, 0.4);
+  cursor: pointer;
+}
+
+.innerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.nickname {
+  font-weight: 600;
+}
+
+.twit {
+  display: inline-block;
+  text-align: left;
+  margin-top: 12px;
+}
+
+.indate {
+  font-size: 12px;
+  color: rgba(223, 230, 233, 0.7);
 }

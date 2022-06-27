@@ -1,6 +1,7 @@
 
 <cfset userEmail = form.userEmail>
 <cfset userPwd = form.userPwd>
+<cfset nickname = form.nickname>
 
 
 <cfif #Len(userEmail)# LT 5>
@@ -8,7 +9,7 @@
     <cflocation url="join.cfm?errorMsg=#errorMsg#" addtoken="false"></cflocation>
 </cfif>
 
-<cfif #Len(userEmail)# GT 15>
+<cfif #Len(userEmail)# GT 40>
     <cfset errorMsg = "Email is too long!">
     <cflocation url="join.cfm?errorMsg=#errorMsg#" addtoken="false"></cflocation>
 </cfif>
@@ -20,14 +21,25 @@
 </cfif>
 
 
-<cfif #Len(userPwd)# GT 15>
+<cfif #Len(userPwd)# GT 40>
     <cfset errorMsg = "Password is too long!">
+    <cflocation url="join.cfm?errorMsg=#errorMsg#" addtoken="false"></cflocation>
+</cfif>
+
+<cfif #Len(nickname)# LT 5>
+    <cfset errorMsg = "Nick Name is too short!">
+    <cflocation url="join.cfm?errorMsg=#errorMsg#" addtoken="false"></cflocation>
+</cfif>
+
+
+<cfif #Len(nickname)# GT 25>
+    <cfset errorMsg = "Nick Name is too long!">
     <cflocation url="join.cfm?errorMsg=#errorMsg#" addtoken="false"></cflocation>
 </cfif>
 
 
 <cfquery datasource="mydb">
-    INSERT INTO twitter_user (email, password) VALUES ('#userEmail#', '#userPwd#');
+    INSERT INTO twitter_user (email, nickname, password) VALUES ('#userEmail#', '#nickname#', '#userPwd#');
 </cfquery>
 
 <cfset successMsg = "Account has been created successfully!">
