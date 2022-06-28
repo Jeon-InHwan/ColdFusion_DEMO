@@ -17,15 +17,34 @@
                 const userInfoData = document.querySelector("#userInfo").innerText;
                 const twitInput = document.querySelector("#twitInput");
                 const twitsWrapper = document.querySelector("#twitsWrapper");
+                const nextPage = document.querySelector("#nextPage");
+                const prevPage = document.querySelector("#prevPage");
+                const prevBtn = document.querySelector("#prevBtn");
+                const nextBtn = document.querySelector("#nextBtn");
+                
+                let flag = false;
+                let scrollUp = false;
+                let scrollDown = false;
 
-                console.log(twitsWrapper.scrollTop);
+                twitsWrapper.scrollTop = 5;
+
+                twitsWrapper.addEventListener("mousewheel", e => {
+                    e.deltaY > 0 ? scrollDown = true : scrollUp = true;
+                    e.deltaY > 0 ? scrollUp = false : scrollDown = false;
+                });
 
                 twitsWrapper.addEventListener('scroll', () => { 
-                    
+                    flag = true;
                     let scrollPercentage = twitsWrapper.scrollTop === 0 ? 0 : 100 * (twitsWrapper.scrollTop + twitsWrapper.clientHeight) /twitsWrapper.scrollHeight;
-                    
                     console.log(scrollPercentage);
-                    
+                    if(scrollPercentage == 100 && scrollDown == true && scrollUp == false) {
+                        prevBtn.style.display = 'none';
+                        nextBtn.style.display = 'block';
+                    }
+                    if(flag == true && scrollPercentage == 0 && scrollDown == false && scrollUp == true) {
+                        prevBtn.style.display = 'block';
+                        nextBtn.style.display = 'none';
+                    }
                 });
     
                 twitInput.focus();
@@ -70,6 +89,19 @@
                 console.log(twit_id);
                 // window.location.href = `index.cfm?twit_id=${twit_id}`;
             }
+
+            const goPrevPage = () => {
+                const twitsWrapper = document.querySelector("#twitsWrapper");
+                const prevPage = document.querySelector("#prevPage");
+                prevPage.click();
+            }
+
+            const goNextPage = () => {
+                const nextPage = document.querySelector("#nextPage");
+                const twitsWrapper = document.querySelector("#twitsWrapper");
+                nextPage.click();
+            }
+
         </script>
         
         <link rel="stylesheet" href="/mini_project/css/styles.css">
@@ -117,6 +149,11 @@
                 </form>
             
             </main>
+
+            <div id="btnWrapper">
+                <button id="prevBtn" onclick="goPrevPage();">prevPage</button>
+                <button id="nextBtn" onclick="goNextPage();">nextPage</button>
+            </div>
 
         </body>
     
