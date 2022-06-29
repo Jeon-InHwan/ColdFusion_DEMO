@@ -26,6 +26,24 @@
 
         </script>
 
+        <!--- Type It Code --->
+
+        <script src="https://unpkg.com/typeit@8.6.0/dist/index.umd.js"></script>
+
+        <style>
+            :root {
+                --ti-cursor-margin-left: 0.1em;
+            }
+        </style>
+
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', () => {
+                new TypeIt("#mainTitle")
+                .options({speed: 100})
+                .go();
+            })
+        </script>
+
         <link rel="stylesheet" href="/mini_project/css/styles.css">
         <link rel="stylesheet" href="/mini_project/css/partials.css">
         <link rel="stylesheet" href="/mini_project/css/login.css">

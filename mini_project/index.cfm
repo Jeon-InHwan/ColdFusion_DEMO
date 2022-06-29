@@ -6,7 +6,7 @@
             <cfoutput>#varTitle#</cfoutput>
         </title>
         <meta charset="UTF-8">
-
+        <script src="https://unpkg.com/typeit@8.6.0/dist/index.umd.js"></script>
         <script type="text/javascript">
 
             window.onload = function() {
@@ -32,6 +32,27 @@
                 location.href = 'login.cfm';
             }
 
+        </script>
+
+        <!--- Type It Code --->
+
+        <style>
+            :root {
+                --ti-cursor-margin-left: 0.1em;
+            }
+        </style>
+
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', () => {
+                new TypeIt("#mainTitle")
+                .options({speed: 350})
+                .pause(500)
+                .options({speed: 400})
+                .delete(4, {delay: 600})
+                .options({speed: 200})
+                .type("Twitterに。")
+                .go();
+            })
         </script>
 
         <link rel="stylesheet" href="/mini_project/css/styles.css">
